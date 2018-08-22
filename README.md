@@ -1,2 +1,4 @@
-# Mplab
-微机原理课程实验
+# Seed class experiments on the Principle of Microcomputer.
+# Author
+ZiHong Yi
+Qijun Zou

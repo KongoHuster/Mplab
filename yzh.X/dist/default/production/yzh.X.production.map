@@ -1,0 +1,43 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Aug 22 08:13:15 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                    .code       code   0x000000    program   0x0000aa
+                   .cinit    romdata   0x000055    program   0x000004
+.config_8007_BUILD/DEFAULT/PRODUCTION/NEWASMT       code   0x008007    program   0x000002
+.config_8008_BUILD/DEFAULT/PRODUCTION/NEWASMT       code   0x008008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000056      
+                            0x008007    0x008008      
+            89 out of 8455 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   CHANGE   0x000022    program     static G:\yzh.X\newAsmTemplate.asm
+                     LOOP   0x000007    program     static G:\yzh.X\newAsmTemplate.asm
+                     MAIN   0x000026    program     static G:\yzh.X\newAsmTemplate.asm
+                   STABLE   0x000050    program     static G:\yzh.X\newAsmTemplate.asm
+                    TABLE   0x000044    program     static G:\yzh.X\newAsmTemplate.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     LOOP   0x000007    program     static G:\yzh.X\newAsmTemplate.asm
+                   CHANGE   0x000022    program     static G:\yzh.X\newAsmTemplate.asm
+                     MAIN   0x000026    program     static G:\yzh.X\newAsmTemplate.asm
+                    TABLE   0x000044    program     static G:\yzh.X\newAsmTemplate.asm
+                   STABLE   0x000050    program     static G:\yzh.X\newAsmTemplate.asm
+
+

@@ -1,0 +1,101 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1786 ]
+[d frameptr 6 ]
+"25 G:\C_project.X\Display.c
+[v _initDisplay initDisplay `(i  1 e 2 0 ]
+"42
+[v _display display `(i  1 e 2 0 ]
+"63
+[v _delay delay `(v  1 e 1 0 ]
+"62 E:\softwore\MPLABX\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 E:\softwore\MPLABX\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 E:\softwore\MPLABX\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"9 G:\C_project.X\Keydriver.c
+[v _portBInit portBInit `(i  1 e 2 0 ]
+"19
+[v _keyMonitor keyMonitor `(i  1 e 2 0 ]
+"40 G:\C_project.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"5 G:\C_project.X\Display.c
+[v _table table `DCC[11]i  1 e 22 0 ]
+"17
+[v _lowCount lowCount `i  1 e 2 0 ]
+"18
+[v _highCount highCount `i  1 e 2 0 ]
+"20
+[v _type type `i  1 e 2 0 ]
+"337 E:\softwore\MPLABX\include\pic16f1786.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"414
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"552
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+"1144
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1213
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1282
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1572
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+"1825
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"3463
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3527
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"4702
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"15322
+[v _RB0 RB0 `VEb  1 e 0 @104 ]
+"15324
+[v _RB1 RB1 `VEb  1 e 0 @105 ]
+"15326
+[v _RB2 RB2 `VEb  1 e 0 @106 ]
+"15328
+[v _RB3 RB3 `VEb  1 e 0 @107 ]
+"4 G:\C_project.X\Keydriver.c
+[v _key key `i  1 e 2 0 ]
+"5
+[v _pressCount pressCount `i  1 e 2 0 ]
+"6
+[v _oldPin oldPin `i  1 e 2 0 ]
+"40 G:\C_project.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"53
+} 0
+"9 G:\C_project.X\Keydriver.c
+[v _portBInit portBInit `(i  1 e 2 0 ]
+{
+"17
+} 0
+"19
+[v _keyMonitor keyMonitor `(i  1 e 2 0 ]
+{
+"109
+} 0
+"25 G:\C_project.X\Display.c
+[v _initDisplay initDisplay `(i  1 e 2 0 ]
+{
+"40
+} 0
+"42
+[v _display display `(i  1 e 2 0 ]
+{
+"61
+} 0
+"63
+[v _delay delay `(v  1 e 1 0 ]
+{
+"65
+[v delay@i i `i  1 a 2 0 ]
+"68
+} 0

@@ -13,7 +13,7 @@ void portBInit()
     
     WPUB = 0xFF;
     OPTION_REG = OPTION_REG & 0b01111111;
-    key = 0;
+//    key = 0;
 }
 
 void keyMonitor()
@@ -23,6 +23,7 @@ void keyMonitor()
     if(RB1 == 0)
     {
         key = 0x06;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x01;
     }
@@ -31,6 +32,8 @@ void keyMonitor()
     if(RB2 == 0)
     {
         key = 0x04;
+        eeprom_write(0x00, key);
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x02;
     }
@@ -39,6 +42,7 @@ void keyMonitor()
     if(RB3 == 0)
     {
         key = 0x02;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x03;
     }
@@ -49,6 +53,7 @@ void keyMonitor()
     if(RB2 == 0)
     {
         key = 0x03;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x02;
     }
@@ -57,6 +62,7 @@ void keyMonitor()
     if(RB3 == 0)
     {
         key = 0x01;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x03;
     }
@@ -67,6 +73,7 @@ void keyMonitor()
     if(RB3 == 0)
     {
         key = 0x05;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x03;
     }
@@ -77,6 +84,7 @@ void keyMonitor()
     if(RB0 == 0)
     {
         key = 0x0A;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x00;
     }
@@ -85,6 +93,7 @@ void keyMonitor()
     if(RB1 == 0)
     {
         key = 0x09;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x01;
     }
@@ -93,6 +102,7 @@ void keyMonitor()
     if(RB2 == 0)
     {
         key = 0x08;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x02;
     }
@@ -101,6 +111,7 @@ void keyMonitor()
     if(RB3 == 0)
     {
         key = 0x07;
+        eeprom_write(0x00, key);
         pressCount = 0x01;
         oldPin = 0x03;
     }

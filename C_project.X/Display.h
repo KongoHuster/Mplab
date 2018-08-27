@@ -10,41 +10,31 @@
 
 #ifdef	__cplusplus
 extern "C" {
-    void initDisplay();
+
+
     
-    void display();
-  
-    void delay();
-    
-//    void my_printf(int a, int b, int c, int d);
-//    void my_printf(int a, int b, int c, int d)
-//{
-//    key = a;
-//    type = b;
-//    highCount = c;
-//    lowCount = d;
-//    return;
-//}
-    
-//    unsigned int table[10] = {0x3F,  //0
-//                              0x06,  //1
-//                              0x4F,
-//                              0x66;
-//                              0x6D,
-//                              0x7D,
-//                              0x07,
-//                              0x7F,
-//                              0x67,
-//                              0x80
-//                                };
-                                
-//    extern int lowCount = 0;
-//    extern int highCount = 0;
-//    extern int key = 0;
-//    extern int type = 0;
 #endif
 
+void initDisplay();
 
+void display();
+
+void delay();
+
+void my_printf(int a, int b, int c, int d);
+
+const int table[11] = {0x3F,  //0
+                          0x06,  //1
+                          0x5B,  //2
+                          0x4F,  //3
+                          0x66,  //4
+                          0x6D,  //5
+                          0x7D,  //6
+                          0x07,  //7
+                          0x7F,  //8
+                          0x67,  //9
+                          0x80   //10
+                            };
 #ifdef	__cplusplus
 }
 #endif

@@ -19,8 +19,8 @@ __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 _GIE 5F 0 ABS 0
 __end_of_IIC_WriteByte 6C4 0 CODE 0
-__Hintentry 2 0 CODE 0
-__Lintentry 2 0 CODE 0
+__Hintentry 3 0 CODE 0
+__Lintentry 3 0 CODE 0
 _IIC_ReadByte 60D 0 CODE 0
 __end_of___awdiv 75D 0 CODE 0
 _key 48 0 BANK0 1
@@ -37,7 +37,7 @@ ltemp 7E 0 ABS 0
 ttemp 7E 0 ABS 0
 wtemp 7E 0 ABS 0
 _init 34 0 BANK0 1
-start 2 0 CODE 0
+start 3 0 CODE 0
 _IRCF0 4CB 0 ABS 0
 _IRCF1 4CC 0 ABS 0
 _IRCF2 4CD 0 ABS 0
@@ -145,8 +145,8 @@ __HcstackBANK0 0 0 ABS 0
 __LcstackBANK0 0 0 ABS 0
 __pcstackBANK0 20 0 BANK0 1
 stacklo 202A 0 ABS 0
-__Hinit 2 0 CODE 0
-__Linit 2 0 CODE 0
+__Hinit 3 0 CODE 0
+__Linit 3 0 CODE 0
 __end_of_main 7EC 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
@@ -356,12 +356,12 @@ __CFG_BOREN$OFF 0 0 ABS 0
 __ptext17 536 0 CODE 0
 __ptext18 5F0 0 CODE 0
 _INTCONbits B 0 ABS 0
-__Hend_init 4 0 CODE 0
-__Lend_init 2 0 CODE 0
+__Hend_init 5 0 CODE 0
+__Lend_init 3 0 CODE 0
 ___awdiv@divisor 70 0 COMMON 1
 __size_of_IIC_ReadByte 0 0 ABS 0
 IIC_Read_Mulit_Data@addrpoint 76 0 COMMON 1
-__Hreset_vec 2 0 CODE 0
+__Hreset_vec 3 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 __size_of_initDisplay 0 0 ABS 0
 intlevel0 0 0 CODE 0
@@ -409,7 +409,7 @@ my_printf@d 26 0 BANK0 1
 __CFG_LVP$OFF 0 0 ABS 0
 ___awdiv@dividend 72 0 COMMON 1
 %segments
-reset_vec 0 7 CODE 0 0
+reset_vec 0 9 CODE 0 0
 cinit FD8 FFF CODE FD8 0
 config 1000E 10011 CONFIG 1000E 0
 cstackCOMMON 70 7C COMMON 70 1
@@ -437,8 +437,8 @@ inittext A78 A83 CODE A78 0
 text17 A6C A77 CODE A6C 0
 text4 A62 A6B CODE A62 0
 %locals
-dist/default/production\C_project.X.production.obj
-C:\Users\yizii\AppData\Local\Temp\s6sg.
+dist/default/debug\C_project.X.debug.obj
+C:\Users\yizii\AppData\Local\Temp\s7hc.
 3078 7EC 0 CODE 0
 3081 7EC 0 CODE 0
 3135 7EC 0 CODE 0

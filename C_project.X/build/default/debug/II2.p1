@@ -1,106 +1,28 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"18 Display.h
-[v _initDisplay `(v ~T0 @X0 0 ef ]
-"68 main.c
-[v _portBInit `(i ~T0 @X0 0 ef ]
-"69
-[v _initEEPROM `(i ~T0 @X0 0 ef ]
-"115 E:\softwore\MPLABX\include\eeprom_routines.h
-[v _eeprom_read `(uc ~T0 @X0 0 ef1`uc ]
-"30 II2.h
-[v _initII2 `(v ~T0 @X0 0 ef ]
-"23
-[v _DelayMS `(v ~T0 @X0 0 ef1`ui ]
-"27
-[v _IIC_Read_Mulit_Data `(v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
-"24 Display.h
-[v _my_printf `(v ~T0 @X0 0 ef4`i`i`i`i ]
-"20
-[v _display `(v ~T0 @X0 0 ef ]
-[; ;__size_t.h: 4: typedef unsigned size_t;
-[; ;stdarg.h: 7: typedef void * va_list[1];
-[; ;stdarg.h: 10: extern void * __va_start(void);
-[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 43: struct __prbuf
-[; ;stdio.h: 44: {
-[; ;stdio.h: 45: char * ptr;
-[; ;stdio.h: 46: void (* func)(char);
-[; ;stdio.h: 47: };
-[; ;errno.h: 29: extern int errno;
-[; ;conio.h: 12: extern void init_uart(void);
-[; ;conio.h: 14: extern char getch(void);
-[; ;conio.h: 15: extern char getche(void);
-[; ;conio.h: 16: extern void putch(char);
-[; ;conio.h: 17: extern void ungetch(char);
-[; ;conio.h: 19: extern __bit kbhit(void);
-[; ;conio.h: 23: extern char * cgets(char *);
-[; ;conio.h: 24: extern void cputs(const char *);
-[; ;stdio.h: 88: extern int cprintf(char *, ...);
-[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 183: extern char * gets(char *);
-[; ;stdio.h: 184: extern int puts(const char *);
-[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;stdlib.h: 7: typedef unsigned short wchar_t;
-[; ;stdlib.h: 15: typedef struct {
-[; ;stdlib.h: 16: int rem;
-[; ;stdlib.h: 17: int quot;
-[; ;stdlib.h: 18: } div_t;
-[; ;stdlib.h: 19: typedef struct {
-[; ;stdlib.h: 20: unsigned rem;
-[; ;stdlib.h: 21: unsigned quot;
-[; ;stdlib.h: 22: } udiv_t;
-[; ;stdlib.h: 23: typedef struct {
-[; ;stdlib.h: 24: long quot;
-[; ;stdlib.h: 25: long rem;
-[; ;stdlib.h: 26: } ldiv_t;
-[; ;stdlib.h: 27: typedef struct {
-[; ;stdlib.h: 28: unsigned long quot;
-[; ;stdlib.h: 29: unsigned long rem;
-[; ;stdlib.h: 30: } uldiv_t;
-[; ;stdlib.h: 53: extern double atof(const char *);
-[; ;stdlib.h: 54: extern double strtod(const char *, const char **);
-[; ;stdlib.h: 55: extern int atoi(const char *);
-[; ;stdlib.h: 56: extern unsigned xtoi(const char *);
-[; ;stdlib.h: 57: extern long atol(const char *);
-[; ;stdlib.h: 58: extern long strtol(const char *, char **, int);
-[; ;stdlib.h: 60: extern int rand(void);
-[; ;stdlib.h: 61: extern void srand(unsigned int);
-[; ;stdlib.h: 62: extern void * calloc(size_t, size_t);
-[; ;stdlib.h: 63: extern div_t div(int numer, int denom);
-[; ;stdlib.h: 64: extern udiv_t udiv(unsigned numer, unsigned denom);
-[; ;stdlib.h: 65: extern ldiv_t ldiv(long numer, long denom);
-[; ;stdlib.h: 66: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-[; ;stdlib.h: 67: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 68: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 69: extern unsigned int _rotl(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 70: extern unsigned int _rotr(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 75: extern void * malloc(size_t);
-[; ;stdlib.h: 76: extern void free(void *);
-[; ;stdlib.h: 77: extern void * realloc(void *, size_t);
-[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
-[; ;stdlib.h: 86: extern int atexit(void (*)(void));
-[; ;stdlib.h: 87: extern char * getenv(const char *);
-[; ;stdlib.h: 88: extern char ** environ;
-[; ;stdlib.h: 89: extern int system(char *);
-[; ;stdlib.h: 90: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-[; ;stdlib.h: 91: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-[; ;stdlib.h: 92: extern int abs(int);
-[; ;stdlib.h: 93: extern long labs(long);
-[; ;stdlib.h: 95: extern char * itoa(char * buf, int val, int base);
-[; ;stdlib.h: 96: extern char * utoa(char * buf, unsigned val, int base);
-[; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
-[; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
-[; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
+"15648 E:\softwore\MPLABX\include\pic16f1786.h
+[v _TRISC4 `Vb ~T0 @X0 0 e@1140 ]
+"15344
+[v _RC3 `Vb ~T0 @X0 0 e@115 ]
+"15342
+[v _RC2 `Vb ~T0 @X0 0 e@114 ]
+"15610
+[v _TRISA1 `Vb ~T0 @X0 0 e@1121 ]
+"28 E:\softwore\MPLABX\include\pic.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"13950 E:\softwore\MPLABX\include\pic16f1786.h
+[v _IRCF0 `Vb ~T0 @X0 0 e@1227 ]
+"13952
+[v _IRCF1 `Vb ~T0 @X0 0 e@1228 ]
+"13954
+[v _IRCF2 `Vb ~T0 @X0 0 e@1229 ]
+"13956
+[v _IRCF3 `Vb ~T0 @X0 0 e@1230 ]
+"15646
+[v _TRISC3 `Vb ~T0 @X0 0 e@1139 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1786.h: 49: extern volatile unsigned char INDF0 @ 0x000;
 "51 E:\softwore\MPLABX\include\pic16f1786.h
 [; ;pic16f1786.h: 51: asm("INDF0 equ 00h");
@@ -5654,49 +5576,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;Display.h: 18: void initDisplay();
-[; ;Display.h: 20: void display();
-[; ;Display.h: 22: void delay();
-[; ;Display.h: 24: void my_printf(int a, int b, int c, int d);
-"26 Display.h
-[v _table `Ci ~T0 @X0 -> 11 `i e ]
-[i _table
-:U ..
--> 63 `i
-"27
--> 6 `i
-"28
--> 91 `i
-"29
--> 79 `i
-"30
--> 102 `i
-"31
--> 109 `i
-"32
--> 125 `i
-"33
--> 7 `i
-"34
--> 127 `i
-"35
--> 103 `i
-"37
--> 128 `i
-..
-]
-[; ;Display.h: 26: const int table[11] = {0x3F,
-[; ;Display.h: 27: 0x06,
-[; ;Display.h: 28: 0x5B,
-[; ;Display.h: 29: 0x4F,
-[; ;Display.h: 30: 0x66,
-[; ;Display.h: 31: 0x6D,
-[; ;Display.h: 32: 0x7D,
-[; ;Display.h: 33: 0x07,
-[; ;Display.h: 34: 0x7F,
-[; ;Display.h: 35: 0x67,
-[; ;Display.h: 36: 0x80
-[; ;Display.h: 37: };
 [; ;II2.h: 18: extern void IIC_WriteACK(void);
 [; ;II2.h: 19: extern void IIC_Stop(void);
 [; ;II2.h: 20: extern void IIC_Writenoack(void);
@@ -5709,117 +5588,550 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;II2.h: 27: extern void IIC_Read_Mulit_Data(unsigned char commond, unsigned char address, unsigned char *addrpoint, unsigned char bytenum);
 [; ;II2.h: 28: extern void IIC_Write_Mulit_Data(unsigned char commond, unsigned char reg_addr, unsigned char *mdatapointer, unsigned char bytenum);
 [; ;II2.h: 30: extern void initII2();
-"21 main.c
-[p x FOSC=ECH ]
-"22
-[p x WDTE=OFF ]
-"23
-[p x PWRTE=ON ]
-"24
-[p x MCLRE=ON ]
-"25
-[p x CP=OFF ]
-"26
-[p x CPD=OFF ]
-"27
-[p x BOREN=OFF ]
-"28
-[p x CLKOUTEN=OFF ]
-"29
-[p x IESO=ON ]
-"30
-[p x FCMEN=ON ]
-"33
-[p x WRT=OFF ]
-"34
-[p x VCAPEN=OFF ]
-"35
-[p x PLLEN=ON ]
-"36
-[p x STVREN=ON ]
-"37
-[p x BORV=LO ]
-"38
-[p x LPBOR=OFF ]
-"39
-[p x LVP=OFF ]
-"44
-[v _key `i ~T0 @X0 1 e ]
-[; ;main.c: 44: int key;
-"45
-[v _init `uc ~T0 @X0 -> 8 `i e ]
-[i _init
-:U ..
--> -> 89 `i `uc
--> -> 67 `i `uc
--> -> 33 `i `uc
--> -> 17 `i `uc
--> -> 3 `i `uc
--> -> 3 `i `uc
--> -> 9 `i `uc
--> -> 0 `i `uc
-..
-]
-[; ;main.c: 45: unsigned char init[8] = {0x59, 0x43, 0x21, 0x11, 0x03, 0x03, 0x09, 0x00};
-"46
-[v _recive `uc ~T0 @X0 -> 2 `i e ]
-[; ;main.c: 46: unsigned char recive[2];
-"65
-[v _main `(i ~T0 @X0 1 ef2`i`**uc ]
+"19 II2.c
+[v _DelayUS `(v ~T0 @X0 1 ef1`uc ]
+"20
 {
-[; ;main.c: 65: int main(int argc, char** argv) {
-[e :U _main ]
-[v _argc `i ~T0 @X0 1 r1 ]
-[v _argv `**uc ~T0 @X0 1 r2 ]
+[; ;II2.c: 19: void DelayUS(unsigned char delay)
+[; ;II2.c: 20: {
+[e :U _DelayUS ]
+"19
+[v _delay `uc ~T0 @X0 1 r1 ]
+"20
 [f ]
-[; ;main.c: 67: initDisplay();
-"67
-[e ( _initDisplay ..  ]
-[; ;main.c: 68: portBInit();
-"68
-[e ( _portBInit ..  ]
-[; ;main.c: 69: initEEPROM();
-"69
-[e ( _initEEPROM ..  ]
-[; ;main.c: 71: key = eeprom_read(&key);
-"71
-[e = _key -> ( _eeprom_read (1 -> &U _key `uc `i ]
-[; ;main.c: 79: initII2();
-"79
-[e ( _initII2 ..  ]
-[; ;main.c: 81: DelayMS(5);
-"81
-[e ( _DelayMS (1 -> -> 5 `i `ui ]
-[; ;main.c: 82: while(1)
-"82
-[e :U 626 ]
-[; ;main.c: 83: {
-"83
-{
-[; ;main.c: 86: IIC_Read_Mulit_Data(0x0090, 0x00, recive, 3);
-"86
-[e ( _IIC_Read_Mulit_Data (4 , , , -> -> 144 `i `uc -> -> 0 `i `uc &U _recive -> -> 3 `i `uc ]
-[; ;main.c: 87: my_printf(table[init[0] / 16], table[init[0] % 16], table[recive[0] / 16], table[recive[0] % 16]);
-"87
-[e ( _my_printf (4 , , , *U + &U _table * -> -> / -> *U + &U _init * -> -> -> 0 `i `ui `ux -> -> # *U &U _init `ui `ux `i -> 16 `i `ui `ux -> -> # *U &U _table `ui `ux *U + &U _table * -> -> % -> *U + &U _init * -> -> -> 0 `i `ui `ux -> -> # *U &U _init `ui `ux `i -> 16 `i `ui `ux -> -> # *U &U _table `ui `ux *U + &U _table * -> -> / -> *U + &U _recive * -> -> -> 0 `i `ui `ux -> -> # *U &U _recive `ui `ux `i -> 16 `i `ui `ux -> -> # *U &U _table `ui `ux *U + &U _table * -> -> % -> *U + &U _recive * -> -> -> 0 `i `ui `ux -> -> # *U &U _recive `ui `ux `i -> 16 `i `ui `ux -> -> # *U &U _table `ui `ux ]
-[; ;main.c: 88: display();
-"88
-[e ( _display ..  ]
-[; ;main.c: 89: DelayMS(1);
-"89
-[e ( _DelayMS (1 -> -> 1 `i `ui ]
-"90
+[; ;II2.c: 21: while(--delay);
+"21
+[e $U 620  ]
+[e :U 621 ]
+[e :U 620 ]
+[e $ != -> =- _delay -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 621  ]
+[e :U 622 ]
+[; ;II2.c: 22: }
+"22
+[e :UE 619 ]
 }
-[e :U 625 ]
-"82
-[e $U 626  ]
+"31
+[v _DelayMS `(v ~T0 @X0 1 ef1`ui ]
+"32
+{
+[; ;II2.c: 31: void DelayMS(unsigned int delay)
+[; ;II2.c: 32: {
+[e :U _DelayMS ]
+"31
+[v _delay `ui ~T0 @X0 1 r1 ]
+"32
+[f ]
+"33
+[v _i `ui ~T0 @X0 1 a ]
+[; ;II2.c: 33: unsigned int i;
+[; ;II2.c: 34: for(; delay > 0; delay--)
+"34
+{
+[e $ > _delay -> -> 0 `i `ui 624  ]
+[e $U 625  ]
+"35
+[e :U 624 ]
+[; ;II2.c: 35: for(i = 0; i < 453; i++);
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 453 `i `ui 627  ]
+[e $U 628  ]
 [e :U 627 ]
-[; ;main.c: 90: }
-[; ;main.c: 92: return (0);
-"92
-[e ) -> 0 `i ]
-[e $UE 624  ]
-[; ;main.c: 93: }
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 453 `i `ui 627  ]
+[e :U 628 ]
+}
+"34
+[e -- _delay -> -> 1 `i `ui ]
+[e $ > _delay -> -> 0 `i `ui 624  ]
+[e :U 625 ]
+"35
+}
+[; ;II2.c: 36: }
+"36
+[e :UE 623 ]
+}
+"45
+[v _IIC_WriteACK `(v ~T0 @X0 1 ef ]
+"46
+{
+[; ;II2.c: 45: void IIC_WriteACK(void)
+[; ;II2.c: 46: {
+[e :U _IIC_WriteACK ]
+[f ]
+[; ;II2.c: 47: TRISC4 = 0;
+"47
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 49: RC3 = 0;
+"49
+[e = _RC3 -> -> 0 `i `b ]
+[; ;II2.c: 50: DelayUS(4);
+"50
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 51: RC2 = 1;
+"51
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 52: RC2 = 0;
+"52
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 53: TRISA1=1;
+"53
+[e = _TRISA1 -> -> 1 `i `b ]
+[; ;II2.c: 60: }
+"60
+[e :UE 630 ]
+}
+"69
+[v _IIC_Writenoack `(v ~T0 @X0 1 ef ]
+"70
+{
+[; ;II2.c: 69: void IIC_Writenoack(void)
+[; ;II2.c: 70: {
+[e :U _IIC_Writenoack ]
+[f ]
+[; ;II2.c: 71: TRISC4 = 0;
+"71
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 72: RC2 = 0;
+"72
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 73: RC3 = 1;
+"73
+[e = _RC3 -> -> 1 `i `b ]
+[; ;II2.c: 74: RC2 = 1;
+"74
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 75: RC2 = 0;
+"75
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 83: TRISC4 = 1;
+"83
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;II2.c: 84: }
+"84
+[e :UE 631 ]
+}
 "93
-[e :UE 624 ]
+[v _IIC_Start `(v ~T0 @X0 1 ef ]
+"94
+{
+[; ;II2.c: 93: void IIC_Start(void)
+[; ;II2.c: 94: {
+[e :U _IIC_Start ]
+[f ]
+[; ;II2.c: 95: TRISC4 = 0;
+"95
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 96: RC3 = 1;
+"96
+[e = _RC3 -> -> 1 `i `b ]
+[; ;II2.c: 98: RC2 = 1;
+"98
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 99: DelayUS(4);
+"99
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 100: RC3 = 0;
+"100
+[e = _RC3 -> -> 0 `i `b ]
+[; ;II2.c: 101: DelayUS(4);
+"101
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 102: RC2 = 0;
+"102
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 104: TRISC4 = 1;
+"104
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;II2.c: 105: __nop();
+"105
+[e ( ___nop ..  ]
+[; ;II2.c: 106: __nop();
+"106
+[e ( ___nop ..  ]
+[; ;II2.c: 107: }
+"107
+[e :UE 632 ]
+}
+"116
+[v _IIC_Stop `(v ~T0 @X0 1 ef ]
+"117
+{
+[; ;II2.c: 116: void IIC_Stop(void)
+[; ;II2.c: 117: {
+[e :U _IIC_Stop ]
+[f ]
+[; ;II2.c: 118: TRISC4 = 0;
+"118
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 119: RC3 = 0;
+"119
+[e = _RC3 -> -> 0 `i `b ]
+[; ;II2.c: 120: RC2 = 0;
+"120
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 121: DelayUS(4);
+"121
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 122: RC3 = 1;
+"122
+[e = _RC3 -> -> 1 `i `b ]
+[; ;II2.c: 123: RC2 = 1;
+"123
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 124: DelayUS(4);
+"124
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 126: }
+"126
+[e :UE 633 ]
+}
+"134
+[v _IIC_WriteByte `(uc ~T0 @X0 1 ef1`uc ]
+"135
+{
+[; ;II2.c: 134: unsigned char IIC_WriteByte(unsigned char wdata)
+[; ;II2.c: 135: {
+[e :U _IIC_WriteByte ]
+"134
+[v _wdata `uc ~T0 @X0 1 r1 ]
+"135
+[f ]
+"137
+[v _i `uc ~T0 @X0 1 a ]
+[v _status `uc ~T0 @X0 1 a ]
+[; ;II2.c: 137: unsigned char i, status;
+[; ;II2.c: 138: RC2 = 0;
+"138
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 139: TRISC4=0;
+"139
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 141: for(i = 0; i < 8; i++)
+"141
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 635  ]
+[e $U 636  ]
+"142
+[e :U 635 ]
+[; ;II2.c: 142: {
+{
+[; ;II2.c: 143: if((wdata & 0x80) == 0x80)
+"143
+[e $ ! == & -> _wdata `i -> 128 `i -> 128 `i 638  ]
+[; ;II2.c: 144: {
+"144
+{
+[; ;II2.c: 145: RC3 = 1;
+"145
+[e = _RC3 -> -> 1 `i `b ]
+"147
+}
+[; ;II2.c: 147: }
+[e $U 639  ]
+"148
+[e :U 638 ]
+[; ;II2.c: 148: else
+[; ;II2.c: 149: {
+"149
+{
+[; ;II2.c: 150: RC3 = 0;
+"150
+[e = _RC3 -> -> 0 `i `b ]
+"152
+}
+[e :U 639 ]
+[; ;II2.c: 152: }
+[; ;II2.c: 153: DelayUS(4);
+"153
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 154: RC2 = 1;
+"154
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 156: wdata <<= 1;
+"156
+[e =<< _wdata -> 1 `i ]
+[; ;II2.c: 157: DelayUS(4);
+"157
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 158: RC2 = 0;
+"158
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 159: DelayUS(2);
+"159
+[e ( _DelayUS (1 -> -> 2 `i `uc ]
+"160
+}
+"141
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 635  ]
+[e :U 636 ]
+"160
+}
+[; ;II2.c: 160: }
+[; ;II2.c: 161: RC2 = 0;
+"161
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 162: TRISC4 = 1;
+"162
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;II2.c: 164: DelayUS(2);
+"164
+[e ( _DelayUS (1 -> -> 2 `i `uc ]
+[; ;II2.c: 165: RC2 = 1;
+"165
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 166: DelayUS(2);
+"166
+[e ( _DelayUS (1 -> -> 2 `i `uc ]
+[; ;II2.c: 167: __nop();
+"167
+[e ( ___nop ..  ]
+[; ;II2.c: 168: __nop();
+"168
+[e ( ___nop ..  ]
+[; ;II2.c: 169: __nop();
+"169
+[e ( ___nop ..  ]
+[; ;II2.c: 170: if(RC3)
+"170
+[e $ ! _RC3 640  ]
+[; ;II2.c: 171: {
+"171
+{
+[; ;II2.c: 172: status = 1;
+"172
+[e = _status -> -> 1 `i `uc ]
+"173
+}
+[; ;II2.c: 173: }
+[e $U 641  ]
+"174
+[e :U 640 ]
+[; ;II2.c: 174: else
+[; ;II2.c: 175: {
+"175
+{
+[; ;II2.c: 176: status = 0;
+"176
+[e = _status -> -> 0 `i `uc ]
+"177
+}
+[e :U 641 ]
+[; ;II2.c: 177: }
+[; ;II2.c: 178: RC2 = 0;
+"178
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 179: TRISC4 = 0;
+"179
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 180: return status;
+"180
+[e ) _status ]
+[e $UE 634  ]
+[; ;II2.c: 181: }
+"181
+[e :UE 634 ]
+}
+"214
+[v _IIC_ReadByte `(uc ~T0 @X0 1 ef ]
+"215
+{
+[; ;II2.c: 214: unsigned char IIC_ReadByte(void)
+[; ;II2.c: 215: {
+[e :U _IIC_ReadByte ]
+[f ]
+"216
+[v _i `uc ~T0 @X0 1 a ]
+[v _bytedata `uc ~T0 @X0 1 a ]
+[; ;II2.c: 216: unsigned char i, bytedata = 0;
+[e = _bytedata -> -> 0 `i `uc ]
+[; ;II2.c: 217: TRISC4 = 1;
+"217
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;II2.c: 218: RC3 = 1;
+"218
+[e = _RC3 -> -> 1 `i `b ]
+[; ;II2.c: 222: for(i = 0; i < 8; i++)
+"222
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 643  ]
+[e $U 644  ]
+"223
+[e :U 643 ]
+[; ;II2.c: 223: {
+{
+[; ;II2.c: 231: __nop();
+"231
+[e ( ___nop ..  ]
+[; ;II2.c: 232: RC2 = 0;
+"232
+[e = _RC2 -> -> 0 `i `b ]
+[; ;II2.c: 233: DelayUS(4);
+"233
+[e ( _DelayUS (1 -> -> 4 `i `uc ]
+[; ;II2.c: 234: RC2 = 1;
+"234
+[e = _RC2 -> -> 1 `i `b ]
+[; ;II2.c: 235: __nop();
+"235
+[e ( ___nop ..  ]
+[; ;II2.c: 236: __nop();
+"236
+[e ( ___nop ..  ]
+[; ;II2.c: 237: bytedata <<= 1;
+"237
+[e =<< _bytedata -> 1 `i ]
+[; ;II2.c: 238: bytedata |= RC3;
+"238
+[e =| _bytedata -> -> _RC3 `i `uc ]
+[; ;II2.c: 240: __nop();
+"240
+[e ( ___nop ..  ]
+[; ;II2.c: 241: __nop();
+"241
+[e ( ___nop ..  ]
+"242
+}
+"222
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 643  ]
+[e :U 644 ]
+"242
+}
+[; ;II2.c: 242: }
+[; ;II2.c: 243: TRISC4 = 0;
+"243
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 244: return(bytedata);
+"244
+[e ) _bytedata ]
+[e $UE 642  ]
+[; ;II2.c: 245: }
+"245
+[e :UE 642 ]
+}
+"254
+[v _IIC_Read_Mulit_Data `(v ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+"255
+{
+[; ;II2.c: 254: void IIC_Read_Mulit_Data(unsigned char commond, unsigned char address, unsigned char *addrpoint, unsigned char bytenum)
+[; ;II2.c: 255: {
+[e :U _IIC_Read_Mulit_Data ]
+"254
+[v _commond `uc ~T0 @X0 1 r1 ]
+[v _address `uc ~T0 @X0 1 r2 ]
+[v _addrpoint `*uc ~T0 @X0 1 r3 ]
+[v _bytenum `uc ~T0 @X0 1 r4 ]
+"255
+[f ]
+"256
+[v _i `uc ~T0 @X0 1 a ]
+[v _status `uc ~T0 @X0 1 a ]
+[; ;II2.c: 256: unsigned char i, status;
+[; ;II2.c: 257: IIC_Start();
+"257
+[e ( _IIC_Start ..  ]
+[; ;II2.c: 267: status = IIC_WriteByte(commond + 0x01);
+"267
+[e = _status ( _IIC_WriteByte (1 -> + -> _commond `i -> 1 `i `uc ]
+[; ;II2.c: 269: for(i = 0; i < bytenum; i++)
+"269
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 650  ]
+"270
+[e :U 647 ]
+[; ;II2.c: 270: {
+{
+[; ;II2.c: 271: if(!status)
+"271
+[e $ ! ! != -> _status `i -> -> -> 0 `i `uc `i 651  ]
+[; ;II2.c: 272: {
+"272
+{
+[; ;II2.c: 273: addrpoint[i] = IIC_ReadByte();
+"273
+[e = *U + _addrpoint * -> _i `ux -> -> # *U _addrpoint `ui `ux ( _IIC_ReadByte ..  ]
+[; ;II2.c: 274: if(i < (bytenum - 1))
+"274
+[e $ ! < -> _i `i - -> _bytenum `i -> 1 `i 652  ]
+[; ;II2.c: 275: {
+"275
+{
+[; ;II2.c: 276: IIC_WriteACK();
+"276
+[e ( _IIC_WriteACK ..  ]
+"277
+}
+[; ;II2.c: 277: }
+[e $U 653  ]
+"278
+[e :U 652 ]
+[; ;II2.c: 278: else
+[; ;II2.c: 279: {
+"279
+{
+[; ;II2.c: 280: IIC_Writenoack();
+"280
+[e ( _IIC_Writenoack ..  ]
+"281
+}
+[e :U 653 ]
+"282
+}
+[e :U 651 ]
+"283
+}
+"269
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 650 ]
+[e $ < -> _i `i -> _bytenum `i 647  ]
+[e :U 648 ]
+"283
+}
+[; ;II2.c: 281: }
+[; ;II2.c: 282: }
+[; ;II2.c: 283: }
+[; ;II2.c: 284: IIC_Stop();
+"284
+[e ( _IIC_Stop ..  ]
+[; ;II2.c: 285: DelayUS(1);
+"285
+[e ( _DelayUS (1 -> -> 1 `i `uc ]
+[; ;II2.c: 286: }
+"286
+[e :UE 646 ]
+}
+"310
+[v _initII2 `(v ~T0 @X0 1 ef ]
+"311
+{
+[; ;II2.c: 310: void initII2()
+[; ;II2.c: 311: {
+[e :U _initII2 ]
+[f ]
+[; ;II2.c: 312: IRCF0 = 1 ;
+"312
+[e = _IRCF0 -> -> 1 `i `b ]
+[; ;II2.c: 313: IRCF1 = 1 ;
+"313
+[e = _IRCF1 -> -> 1 `i `b ]
+[; ;II2.c: 314: IRCF2 = 1 ;
+"314
+[e = _IRCF2 -> -> 1 `i `b ]
+[; ;II2.c: 315: IRCF3 = 1 ;
+"315
+[e = _IRCF3 -> -> 1 `i `b ]
+[; ;II2.c: 317: TRISC3 = 0;
+"317
+[e = _TRISC3 -> -> 0 `i `b ]
+[; ;II2.c: 318: TRISC4 = 0;
+"318
+[e = _TRISC4 -> -> 0 `i `b ]
+[; ;II2.c: 327: }
+"327
+[e :UE 654 ]
 }

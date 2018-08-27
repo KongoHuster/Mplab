@@ -17,6 +17,10 @@
       <itemPath>Display.c</itemPath>
       <itemPath>Keydriver.c</itemPath>
       <itemPath>Keydriver.h</itemPath>
+      <itemPath>EEPROM.c</itemPath>
+      <itemPath>EEPROM.h</itemPath>
+      <itemPath>II2.c</itemPath>
+      <itemPath>II2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
